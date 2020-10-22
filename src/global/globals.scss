@@ -1,0 +1,29 @@
+@import './colors.scss';
+
+.fixed {
+  position: fixed;
+}
+.flex {
+  display: flex;
+}
+.center {
+  justify-content: center;
+  align-items: center;
+}
+.full-size {
+  height: 100%;
+  width: auto;
+}
+body {
+  background: $background-color;
+}
+
+img {
+  @extend .full-size;
+  border-radius: 18px;
+  user-select: none;
+}
+
+.scroll {
+  scroll-behavior: smooth;
+}

@@ -1,0 +1,14 @@
+%fixed {
+  position: fixed;
+}
+
+#pricing-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#table-wrapper {
+  padding: 60px;
+  position: relative;
+  z-index: -1;
+}

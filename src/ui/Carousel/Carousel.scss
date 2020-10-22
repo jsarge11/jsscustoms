@@ -1,0 +1,26 @@
+.front-img-wrapper {
+  padding: 24px;
+  height: 100%;
+  cursor: grab;
+  position: relative;
+}
+
+.carousel-wrapper {
+  height: 70%;
+}
+
+.grabbing {
+  cursor: grabbing;
+}
+.imgs-wrapper {
+  justify-content: start;
+}
+
+@media (max-width: 550px) {
+  .carousel-wrapper {
+    height: 40%;
+  }
+  .front-img-wrapper {
+    height: 90%;
+  }
+}

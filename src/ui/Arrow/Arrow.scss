@@ -1,0 +1,36 @@
+.arrows {
+  position: fixed;
+  font-size: 46px;
+  color: black;
+  z-index: 1000;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+  &:hover {
+    color: grey;
+    transform: scale(1.02);
+  }
+}
+
+.upper-top {
+  top: 40%;
+}
+.lower-top {
+  top: 70%;
+}
+
+$space: 30px;
+.right-arrow {
+  right: $space;
+}
+.left-arrow {
+  left: $space;
+}
+
+@media (max-width: 550px) {
+  .upper-top {
+    top: 30%;
+  }
+  .arrows {
+    font-size: 30px;
+  }
+}

@@ -1,0 +1,22 @@
+@import './global/globals.scss';
+
+.App {
+  text-align: center;
+
+  @extend .full-size;
+}
+
+#homepage {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  padding: 25px;
+  overflow-y: hidden;
+}
+
+.grey-overlay {
+  background: rgba(255, 255, 255, 0.5);
+}

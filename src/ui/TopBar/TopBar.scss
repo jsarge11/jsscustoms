@@ -1,0 +1,33 @@
+@import '../../global/colors.scss';
+@import '../../global/globals.scss';
+#top-bar-span {
+  width: 100%;
+  background: white;
+  position: sticky;
+  top: 0;
+  padding: 8px 0px;
+  z-index: 1000;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 24px;
+  user-select: none;
+  transition: all 0.3s ease-in-out;
+  h2 {
+    cursor: pointer;
+    &:hover {
+      color: grey;
+    }
+  }
+}
+#logo {
+  height: 90px;
+}
+
+@media (max-width: 500px) {
+  #logo {
+    height: 45px;
+  }
+  h2 {
+    font-size: 12px;
+  }
+}
