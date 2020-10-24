@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { Form, Input, Alert, Button } from 'antd';
 import { PreferredMethodSelect } from './PreferredMethodSelect/PreferredMethodSelect';
 import { AppContext, CustomerContext } from '../../../Routes';
@@ -18,8 +18,6 @@ const nameArray = ['First', 'Last'];
 export const GetYoursForm = (props) => {
   const global = useContext(AppContext);
   const { preferredMethod } = global;
-
-  console.log(preferredMethod);
 
   const customerInfo = useContext(CustomerContext);
   const { info, setInfo } = customerInfo;

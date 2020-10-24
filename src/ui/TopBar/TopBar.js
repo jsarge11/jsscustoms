@@ -12,7 +12,7 @@ const TopBar = () => {
   const global = useContext(AppContext);
   const [animationClass, setAnimationClass] = useState('');
   const { index, setIndex } = global;
-  const pages = ['Pricing', 'Artwork', 'Get Yours'];
+  const pages = ['Home', 'Pricing', 'Artwork', 'Get Yours'];
   const logos = [blue, green, pink, red, teal];
   const topBarRef = useRef();
 

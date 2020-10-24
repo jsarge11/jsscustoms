@@ -13,11 +13,11 @@ export const CustomArtworkInput = (props) => {
     status: { success, loading },
   } = global;
   return (
-    <div style={{ width: '50%' }}>
+    <div>
       <p>
         Comments: <span style={{ color: 'lightgrey' }}>(optional)</span>{' '}
         &nbsp;&nbsp;
-        <Tooltip title="I will reach out to discuss your design, this form is just for anything else you'd like me to know.">
+        <Tooltip title="I will reach out to discuss your design, this form is just for anything else you'd like us to know.">
           <QuestionCircleTwoTone />
         </Tooltip>
       </p>
@@ -26,6 +26,7 @@ export const CustomArtworkInput = (props) => {
         <>
           <TextArea
             placeholder="Anything else I should know?"
+            style={{ width: '100%' }}
             autoSize={{ minRows: 3 }}
             showCount
             maxLength={400}

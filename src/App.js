@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.scss';
+
 import Carousel from './ui/Carousel/Carousel';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
     }
   };
 
+  console.log(window.innerWidth);
   useEffect(() => {
     window.addEventListener('resize', sizeListener);
 

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import './GetYours.scss';
 import AnimatedHeader from '../../ui/AnimatedHeader/AnimatedHeader';
 import { Steps } from 'antd';
@@ -9,9 +9,13 @@ import { CustomArtworkInput } from './CustomArtworkInput/CustomArtworkInput';
 const { Step } = Steps;
 
 const GetYours = () => {
-  const [progress, setProgress] = useState(1);
+  const [progress, setProgress] = useState(0);
   const global = useContext(AppContext);
   const { index, logoColors } = global;
+
+  useEffect(() => {
+    window.scrollY = 0;
+  }, [progress]);
 
   function switchForm() {
     switch (progress) {
@@ -32,19 +36,11 @@ const GetYours = () => {
       >
         <AnimatedHeader title="Get Yours" />
       </div>
-      <div
-        style={{
-          display: 'flex',
-          marginLeft: '10%',
-          marginTop: '5%',
-        }}
-      >
-        <div style={{ padding: '5%', height: '80%', marginRight: '10%' }}>
-          <Steps
-            style={{ height: 400, marginTop: -50 }}
-            current={progress}
-            direction="vertical"
-          >
+      <br />
+      <br />
+      <div id="form-wrapper">
+        <div id="step-wrapper">
+          <Steps current={progress} direction="vertical">
             <Step title="Enter your information." step />
             <Step title="Comments / submit your request." step />
             {/* <Step title="Verification and processing." step /> */}

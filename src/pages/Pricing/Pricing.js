@@ -61,9 +61,9 @@ const Summary = () => (
       2) We take the hassle out and acquire the item for you.
       <br /> <br /> * All customs include the prep & refinishing of the shoe so
       your new work of art lasts.
-      <br /> <br /> The pricing above is for some common customs, but as the
-      possibilities are endless, reach out if you want something not on this
-      list.
+      <br /> <br /> The pricing above is for some common custom apparel,
+      however, the possibilities are endless – please reach out if you want
+      something not on this list.
     </h3>
     <br />
     <br />

@@ -114,6 +114,7 @@ const Routes = () => {
           <Route path="/about" component={About} />
           <Route path="/artwork" component={Artwork} />
           <Route path="/getyours" component={GetYours} />
+          <Route path="/home" component={App} />
         </Switch>
         <Footer />
       </CustomerContext.Provider>
