@@ -5,6 +5,7 @@ import { Steps } from 'antd';
 import { AppContext } from '../../Routes';
 import { GetYoursForm } from './Form/GetYoursForm';
 import { CustomArtworkInput } from './CustomArtworkInput/CustomArtworkInput';
+import headerBar from '../../assets/headerbar.png';
 
 const { Step } = Steps;
 
@@ -31,10 +32,19 @@ const GetYours = () => {
   return (
     <>
       <div
-        className="flex center page"
-        style={{ background: `#${logoColors[index]}` }}
+        style={{
+          background: `#f6f6f6`,
+          overflow: 'hidden',
+          position: 'relative',
+        }}
+        className="flex center page header-bar"
       >
         <AnimatedHeader title="Get Yours" />
+        <img
+          className={'header-image'}
+          src={headerBar}
+          alt="logos and drawings"
+        />
       </div>
       <br />
       <br />

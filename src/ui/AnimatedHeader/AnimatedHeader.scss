@@ -1,29 +1,19 @@
 .page {
-  height: 15vh;
-  width: 100vw;
+  height: 30vh;
+  width: 100%;
   background: black;
   position: relative;
 }
 .animate-text {
   position: absolute;
-  top: 5%;
+  top: 40%;
   opacity: 1;
   transition: all 400ms ease-in-out;
 }
 
 @media (max-width: 500px) {
-  .page {
-    height: 8vh;
-  }
   .animate-text {
+    top: 50%;
     font-size: 36px;
-  }
-}
-@media (max-width: 400px) {
-  .page {
-    height: 8vh;
-  }
-  .animate-text {
-    font-size: 24px;
   }
 }

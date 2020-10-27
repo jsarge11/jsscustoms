@@ -20,3 +20,17 @@
 .grey-overlay {
   background: rgba(255, 255, 255, 0.5);
 }
+
+.header-image {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+}
+
+@media (max-width: 1250px) {
+  .header-image {
+    left: 0;
+    width: 1140px;
+  }
+}

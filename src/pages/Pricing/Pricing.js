@@ -1,9 +1,15 @@
-import React, { useContext } from 'react';
+import React, {
+  useContext,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from 'react';
 import './Pricing.scss';
 import AnimatedHeader from '../../ui/AnimatedHeader/AnimatedHeader';
 import { Table } from 'antd';
 import { AppContext } from '../../Routes';
-
+import headerBar from '../../assets/headerbar.png';
 const formatCurrency = (amt) => {
   return `Starting at $${amt}.00`;
 };
@@ -76,14 +82,42 @@ const Summary = () => (
 const Pricing = () => {
   const global = useContext(AppContext);
   const { index, logoColors } = global;
+  const imgRef = useRef();
+  const [divHeight, setDivHeight] = useState(500);
+
+  useLayoutEffect(() => {
+    changeHeight();
+  }, [imgRef]);
+
+  const changeHeight = () => {
+    if (imgRef && imgRef.current) {
+      setDivHeight(imgRef.current.height);
+    }
+  };
+
+  console.log(divHeight);
+  // useLayoutEffect(() => {
+  //   document.addEventListener('resize', changeHeight);
+  //   return document.removeEventListener('resize', changeHeight);
+  // }, []);
 
   return (
     <>
       <div
-        style={{ background: `#${logoColors[index]}` }}
-        className="flex center page"
+        style={{
+          background: `#f6f6f6`,
+          overflow: 'hidden',
+          position: 'relative',
+        }}
+        className="flex center page header-bar"
       >
         <AnimatedHeader title="Pricing" />
+        <img
+          ref={imgRef}
+          className={'header-image'}
+          src={headerBar}
+          alt="logos and drawings"
+        />
       </div>
       <div>
         <div id="table-wrapper">
